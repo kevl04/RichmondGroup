@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Shedule";
+}
+@section scripts{
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script>
+       var url = '@Url.Content("~/Home/GetSchedule/")';
+    </script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    <script src='@Url.Content("~/Scripts/schedule.js")'></script>
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Please select a start date: <input type="text" id="datepicker"></p>
+<button id="btnGetSchedule">Submit</button>
+<h2>Schedule by Engineer:</h2>
+<ul id="schedule"></ul>
+<h2>Schedule by Date:</h2>
+<ul id="timeSchedule"></ul>
